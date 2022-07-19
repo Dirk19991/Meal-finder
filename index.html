@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/acbc4419a4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Food finder</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Food finder</h1>
+      <div class="flex search-form-wrapper">
+        <form class="flex" id="submit">
+          <input type="text" id="search" placeholder="Введите название" />
+          <button class="search-button" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <button class="random-button" id="random">
+          <i class="fa-solid fa-dice-five"></i>
+        </button>
+      </div>
+
+      <div class="result"></div>
+      <div class="meals"></div>
+      <div class="single-meal"></div>
+    </div>
+  </body>
+</html>
