@@ -59,3 +59,5 @@ function findFood(e) {
 }
 
 submitForm.addEventListener('submit', findFood);
+
+let test;
