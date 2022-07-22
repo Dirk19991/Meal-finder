@@ -29,9 +29,7 @@ function findFood(e) {
       error.remove();
     }
     console.log(input);
-    fetch(`https://api.dictionaryapi.dev/api/v2/entries/ru/хлеб`)
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${input}`)
       .then((res) => res.json())
       .then((data) => {
@@ -47,17 +45,18 @@ function findFood(e) {
                 `
             <div class='meal'>
              <img src='${meal.strMealThumb}' alt='${meal.strMeal}' />
-             <div class='meal-info' data-mealID='${meal.idMeal}'></div>
+             <div class='meal-info' data-mealID='${meal.idMeal}'>
+              <h3>${meal.strMeal}</h3>
+             </div>
             </div>
-            <h3>${meal.strMeal}</h3> 
+            
             `
             )
             .join('');
         }
+        searchInput.value = '';
       });
   }
 }
 
 submitForm.addEventListener('submit', findFood);
-
-let test;
