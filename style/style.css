@@ -135,4 +135,7 @@ input[type=text] {
     height: 300px;
     width: 300px;
   }
+  .single-meal img {
+    width: 200px;
+  }
 }/*# sourceMappingURL=style.css.map */
