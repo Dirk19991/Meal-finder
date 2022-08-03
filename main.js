@@ -42,7 +42,7 @@ function findFood(e) {
             .map(
               (meal) =>
                 `
-            <div class='meal single-meal'>
+            <div class='meal'>
              <img src='${meal.strMealThumb}' alt='${meal.strMeal}' />
              <div class='meal-info' data-mealID='${meal.idMeal}'>
               <h3>${meal.strMeal}</h3>
@@ -59,7 +59,6 @@ function findFood(e) {
 }
 
 function getMealByID(mealID) {
-  console.log(mealID);
   fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
     .then((res) => res.json())
     .then((data) => {
@@ -102,7 +101,21 @@ function addMealToDOM(meal) {
   `;
 }
 
+function randomMeal() {
+  mealElements.innerHTML = '';
+  result.innerHTML = '';
+
+  fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+    .then((res) => res.json())
+    .then((data) => {
+      const meal = data.meals[0];
+      addMealToDOM(meal);
+    });
+}
+
 submitForm.addEventListener('submit', findFood);
+
+randomButton.addEventListener('click', randomMeal);
 
 mealElements.addEventListener('click', (e) => {
   const mealInfo = e.path.find((item) => {

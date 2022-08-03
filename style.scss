@@ -36,12 +36,6 @@ input[type='text'] {
   width: 300px;
 }
 
-@media (max-width: $small) {
-  input[type='text'] {
-    width: 100%;
-  }
-}
-
 .error {
   margin-top: 5px;
 }
@@ -85,4 +79,77 @@ input[type='text'] {
   justify-content: center;
   transition: opacity 0.3s;
   opacity: 0;
+}
+
+.single-meal {
+  margin: 30px auto;
+  width: 70%;
+
+  &-info {
+    margin: 20px;
+    padding: 10px;
+    border: 2px #e09850 dashed;
+    border-radius: 5px;
+  }
+
+  img {
+    width: 300px;
+    margin: 15px;
+    border: 4px white solid;
+    border-radius: 2px;
+  }
+
+  p {
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+      border: 1px solid #ededed;
+      border-radius: 5px;
+      background-color: white;
+      display: inline-block;
+      color: #2d2013;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 5px;
+      margin: 0 5px 5px 0;
+    }
+  }
+}
+
+@media (max-width: $large) {
+  .meals {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: $medium) {
+  .meals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meal {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media (max-width: $small) {
+  input[type='text'] {
+    width: 100%;
+  }
+
+  .meals {
+    grid-template-columns: 1fr;
+  }
+
+  .meal {
+    height: 300px;
+    width: 300px;
+  }
 }
