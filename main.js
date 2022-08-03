@@ -32,7 +32,6 @@ function findFood(e) {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${input}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         result.innerHTML = `<h2>Search results for '${input}':</h2>`;
 
         if (data.meals === null) {
