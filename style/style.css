@@ -76,6 +76,9 @@ input[type=text] {
 .single-meal {
   margin: 30px auto;
   width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .single-meal-info {
   margin: 20px;
@@ -123,9 +126,6 @@ input[type=text] {
     height: 200px;
     width: 200px;
   }
-  .single-meal img {
-    width: 250px;
-  }
 }
 @media (max-width: 500px) {
   input[type=text] {
@@ -137,8 +137,5 @@ input[type=text] {
   .meal {
     height: 300px;
     width: 300px;
-  }
-  .single-meal img {
-    width: 175px;
   }
 }/*# sourceMappingURL=style.css.map */
