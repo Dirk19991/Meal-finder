@@ -123,6 +123,9 @@ input[type=text] {
     height: 200px;
     width: 200px;
   }
+  .single-meal img {
+    width: 250px;
+  }
 }
 @media (max-width: 500px) {
   input[type=text] {
@@ -136,6 +139,6 @@ input[type=text] {
     width: 300px;
   }
   .single-meal img {
-    width: 200px;
+    width: 175px;
   }
 }/*# sourceMappingURL=style.css.map */
